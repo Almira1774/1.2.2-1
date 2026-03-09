@@ -12,8 +12,7 @@ const Table = () => {
         <th>Заказать</th>
       </thead>
       <tbody>
-        {carsList.length > 0 ? (
-          carsList.map((car) => {
+      {carsList.map((car) => {
             return (
               <tr key={car.brand}>
                 <td>
@@ -32,20 +31,11 @@ const Table = () => {
                   </select>
                 </td>
                 <td>
-                  {car.isReserved ? (
-                    <button disabled={true}>Зарезервирован</button>
-                  ) : (
-                    <button>Забронировать</button>
-                  )}
+                  <button disabled={car.isReserved? true : 
+                  false}>Забронировать</button>
                 </td>
               </tr>
-            );
-          })
-        ) : (
-          <tr className="noCars">
-            <td colSpan="5">Автомобили не найдены</td>
-          </tr>
-        )}
+            )})}
       </tbody>
     </table>
   );
