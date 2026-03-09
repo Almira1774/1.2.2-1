@@ -1,0 +1,19 @@
+.table {
+  max-width: 100%; 
+  border-collapse: collapse; 
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #ddd; 
+  text-align: center; 
+  min-width: 80px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+select{
+  min-width: 95px;
+}
